@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Multi Games Flutter App</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --bg:#0f172a;
+    --card:rgba(30,41,59,0.6);
+    --text:#f1f5f9;
+    --accent:#3b82f6;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+body{
+    background:linear-gradient(-45deg,#0f172a,#1e293b,#0f172a,#111827);
+    background-size:400% 400%;
+    animation:gradientBG 15s ease infinite;
+    color:var(--text);
+    line-height:1.7;
+}
+
+/* Animated Background */
+
+@keyframes gradientBG{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+    padding:120px 0 80px;
+}
+
+h1{
+    font-size:38px;
+    margin-bottom:20px;
+}
+
+h2{
+    color:var(--accent);
+    margin-bottom:15px;
+}
+
+p{
+    opacity:0.9;
+}
+
+/* SECTION */
+
+.section{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
+    margin-top:70px;
+}
+
+.section img{
+    width:100%;
+    max-height:350px;
+    object-fit:cover;
+    border-radius:16px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.5);
+    transition:0.4s;
+    cursor:pointer;
+}
+
+.section img:hover{
+    transform:scale(1.04);
+}
+
+/* IMAGE MODAL */
+
+.modal{
+    display:none;
+    position:fixed;
+    z-index:9999;
+    padding-top:60px;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.9);
+}
+
+.modal img{
+    margin:auto;
+    display:block;
+    max-width:90%;
+    max-height:85%;
+    border-radius:12px;
+}
+
+.modal span{
+    position:absolute;
+    top:30px;
+    right:40px;
+    color:#fff;
+    font-size:35px;
+    cursor:pointer;
+}
+
+/* BACK BUTTON */
+
+.back{
+    display:inline-block;
+    margin-top:80px;
+    padding:14px 30px;
+    background:var(--accent);
+    color:#fff;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.back:hover{
+    background:#2563eb;
+    transform:translateY(-4px);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+    .section{
+        grid-template-columns:1fr;
+    }
+
+    h1{
+        font-size:26px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Multi Games Flutter Application</h1>
+
+<p>
+I designed and developed a complete multi-game mobile application using Flutter.
+The project combines clean UI/UX design with structured game algorithms.
+Each game has its own logic and interaction system built from scratch.
+</p>
+
+<!-- Maze -->
+<div class="section">
+    <div>
+        <h2>1. Maze Game</h2>
+        <p>
+        Built using Grid Navigation Algorithm with Collision Detection.
+        Each level is generated differently to increase challenge and engagement.
+        </p>
+    </div>
+    <img src="images/maze.jpg" onclick="openModal(this.src)">
+</div>
+
+<!-- Snake -->
+<div class="section">
+    <div>
+        <h2>2. Snake Game</h2>
+        <p>
+        Implemented using Array-based Movement Algorithm and Self-Collision Detection.
+        The snake grows dynamically while constantly checking wall and body collisions.
+        </p>
+    </div>
+    <img src="images/snake.jpg" onclick="openModal(this.src)">
+</div>
+
+<!-- Ball -->
+<div class="section">
+    <div>
+        <h2>3. Ball Physics Game</h2>
+        <p>
+        Designed using Physics-based Motion Algorithm.
+        The ball reacts dynamically to collisions, giving realistic and smooth movement.
+        </p>
+    </div>
+    <img src="images/ball.jpg" onclick="openModal(this.src)">
+</div>
+
+<!-- XO -->
+<div class="section">
+    <div>
+        <h2>4. XO (Tic Tac Toe)</h2>
+        <p>
+        Built using Pattern Matching Algorithm that checks all 8 winning combinations
+        after each move to instantly determine the winner or draw.
+        </p>
+    </div>
+    <img src="images/xo.jpg" onclick="openModal(this.src)">
+</div>
+
+<p style="margin-top:80px;">
+This project reflects strong understanding of game logic, algorithm implementation,
+and interactive mobile UI development using Flutter.
+</p>
+
+<div style="text-align:center;">
+    <a href="javascript:history.back()" class="back">← Back to Portfolio</a>
+</div>
+
+</div>
+
+<!-- IMAGE MODAL -->
+<div id="imageModal" class="modal">
+    <span onclick="closeModal()">&times;</span>
+    <img id="modalImage">
+</div>
+
+<script>
+
+function openModal(src){
+    document.getElementById("imageModal").style.display="block";
+    document.getElementById("modalImage").src=src;
+}
+
+function closeModal(){
+    document.getElementById("imageModal").style.display="none";
+}
+
+</script>
+
+</body>
+</html>

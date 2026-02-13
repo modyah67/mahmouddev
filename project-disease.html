@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Disease Diagnosis System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            color: white;
+            line-height: 1.8;
+        }
+
+        .container {
+            width: 85%;
+            margin: auto;
+            padding: 40px 0;
+        }
+
+        .back-btn {
+            background: #00c6ff;
+            border: none;
+            padding: 10px 18px;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: white;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            margin-top: 40px;
+            color: #00eaff;
+        }
+
+        h3 {
+            margin-top: 25px;
+            color: #00c6ff;
+        }
+
+        p {
+            color: #ddd;
+        }
+
+        ul {
+            margin-top: 10px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            color: #ddd;
+        }
+
+        .video-section {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        iframe {
+            width: 100%;
+            max-width: 800px;
+            height: 450px;
+            border-radius: 10px;
+        }
+
+        @media(max-width:768px){
+            iframe {
+                height: 250px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <button onclick="goBack()" class="back-btn">← Back</button>
+
+    <h1>AI Disease Diagnosis System</h1>
+
+    <p>
+        I developed a smart disease diagnosis system based on modern technologies.
+        The frontend was built using Flutter to create a simple and responsive interface,
+        while Python was used for data processing and implementing Artificial Intelligence.
+    </p>
+
+    <p>
+        The main goal of the system is to help users get a quick preliminary health
+        evaluation, enabling them to take informed initial steps regarding their condition.
+    </p>
+
+    <h2>How The System Works</h2>
+
+    <h3>Health Data Input</h3>
+    <p>
+        Users can enter basic personal health information such as weight, age,
+        Body Mass Index (BMI), blood pressure level, and blood sugar level.
+    </p>
+
+    <h3>Analysis & Prediction</h3>
+    <p>
+        The system processes this data using intelligent algorithms to determine
+        the most probable disease and assess the severity level, providing a clear
+        initial evaluation.
+    </p>
+
+    <h3>Symptom-Based Diagnosis</h3>
+    <p>
+        The system allows flexible symptom input either through categorized
+        organized lists or manual free-text entry.
+    </p>
+
+    <p>
+        After submission, symptoms are analyzed carefully to provide a more
+        detailed and accurate potential diagnosis, focusing on both speed and precision.
+    </p>
+
+    <h2>Additional Features</h2>
+
+    <ul>
+        <li>Nearest hospital detection using GPS location services.</li>
+        <li>Simple, fast, and responsive user interface.</li>
+        <li>Fully compatible with mobile phones and tablets.</li>
+        <li>Scalable architecture ready for integration with medical databases or external systems.</li>
+    </ul>
+
+    <div class="video-section">
+        <h2>Project Demo</h2>
+
+        <!-- غير اللينك ده بلينك الفيديو بتاعك -->
+        <iframe 
+            src="https://www.youtube.com/embed/dTf2-MRbXQA?si=Ze8QJGVZ9khCTGIY"
+            frameborder="0"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+</div>
+
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
+
+</body>
+</html>
